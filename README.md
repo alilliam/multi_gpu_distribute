@@ -1,8 +1,13 @@
 # multi_gpu_distribute
 ### PyTorch DDP接口
-1. 实验原理 Ring AllReduce
-2. 由于多机环境不可控因素影响，可能导致实验不成功，所以使用Docker。
-3. 多机跑实验
+#### 特点
+1. 通信框架 Ring AllReduce
+2. 多进程 一个结点一个进程
+3. 支持数据并行和模型并行
+
+#### 具体实现
+1. Backend：第三方通信机制，进程间通信 NCCL
+2. TCP initialization：联系其他机器上的进程，初始化方式：TCP
 
 ### Horovod
 分布式框架
@@ -44,3 +49,6 @@ CUDA_VISIBLE_DEVICES=0 python mnist.py -a resnet101 --dist url 'tcp://ip-of-prim
 #修改rank
 CUDA_VISIBLE_DEVICES=0 python mnist.py -a resnet101 --dist url 'tcp://ip-of-primary:8001' --dist-backend 'nccl' --world-size 2 --rank 1 your-dataPath
 ```
+#### Ref：
+https://pytorch.org/tutorials/intermediate/dist_tuto.html
+https://zhuanlan.zhihu.com/p/136372142
