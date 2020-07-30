@@ -50,5 +50,5 @@ CUDA_VISIBLE_DEVICES=0 python mnist.py -a resnet101 --dist url 'tcp://ip-of-prim
 CUDA_VISIBLE_DEVICES=0 python mnist.py -a resnet101 --dist url 'tcp://ip-of-primary:8001' --dist-backend 'nccl' --world-size 2 --rank 1 your-dataPath
 ```
 #### Ref：
-https://pytorch.org/tutorials/intermediate/dist_tuto.html
+https://pytorch.org/tutorials/intermediate/dist_tuto.html \
 https://zhuanlan.zhihu.com/p/136372142
