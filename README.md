@@ -24,7 +24,7 @@ https://github.com/NVIDIA/nvidia-docker
 
 3. 修改Docker源，这样拉取镜像更快。
 
-4. 拉取镜像， 可以使用Dockerfile选择自己想要的配置，也可以在[DockerHub][https://hub.docker.com/r/horovod/horovod/tags]中直接下载预先构建好的镜像。
+4. 拉取镜像， 可以使用Dockerfile选择自己想要的配置，也可以在[DockerHub][https://hub.docker.com/r/horovod/horovod/tags] 中直接下载预先构建好的镜像。
 
 5. 在各主机上启用容器 (配置网络为主机网络, 配置共享文件夹)
 ```bash
